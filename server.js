@@ -60,6 +60,6 @@ app.get('/profile/:id', (req, res) => { profile.handleProfileGet(req, res, db) }
 app.put('/image', (req, res) => { image.handleEntryUpdate(req, res, db) });
 app.post('/imageurl', (req, res) => { image.handleAPICall(req, res) });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log('hello i am working fine');
 })
